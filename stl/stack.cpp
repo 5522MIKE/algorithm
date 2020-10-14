@@ -2,14 +2,15 @@
  * @Author: MikyMing
  * @Date: 2020-10-13 23:23:55
  * @LastEditors: MikyMing
- * @LastEditTime: 2020-10-13 23:24:10
+ * @LastEditTime: 2020-10-14 09:40:20
  * @Description: set
  * @Analysis: set
  * @FilePath: /c/stl/stack.cpp
  */
 
-#include <stack> //注意包含stack头文件
-#include <iostream>
+// #include <stack> //注意包含stack头文件
+// #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
