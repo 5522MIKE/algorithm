@@ -2,9 +2,9 @@
  * @Author: MikyMing
  * @Date: 2021-03-31 23:36:17
  * @LastEditors: MikyMing
- * @LastEditTime: 2021-03-31 23:36:58
+ * @LastEditTime: 2021-03-31 23:54:11
  * @Description: set
- * @Analysis: set
+ * @Analysis: 双指针
  * @FilePath: /algorithm/leetcode/26.删除有序数组中的重复项.cpp
  */
 /*
@@ -17,11 +17,13 @@
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
+        if(nums.size() == 0)    
+            return 0;
         int i = 0;
-        for (int n : nums)
-            if (!i || n > nums[i-1])
-                nums[i++] = n;
-        return i;
+        for(int j = 1; j < nums.size(); ++j)
+            if(nums[j] != nums[i])  
+                nums[++i] = nums[j];
+        return i + 1;
     }
 };
 // @lc code=end
