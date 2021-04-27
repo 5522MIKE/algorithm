@@ -2,7 +2,7 @@
  * @Author: MikyMing
  * @Date: 2021-04-27 00:22:54
  * @LastEditors: MikyMing
- * @LastEditTime: 2021-04-27 00:26:55
+ * @LastEditTime: 2021-04-27 00:30:40
  * @Description: set
  * @Analysis: set
  * @FilePath: /algorithm/leetcode/11.盛最多水的容器.cpp
@@ -25,8 +25,7 @@ public:
             ans = max(ans, area);
             if (height[l] <= height[r]) {
                 ++l;
-            }
-            else {
+            }else {
                 --r;
             }
         }
