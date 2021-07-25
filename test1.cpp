@@ -2,7 +2,7 @@
  * @Author: MikyMing
  * @Date: 2020-10-08 09:53:03
  * @LastEditors: MikyMing
- * @LastEditTime: 2021-07-16 17:48:36
+ * @LastEditTime: 2021-07-25 10:25:07
  * @Description: set
  * @Analysis: set
  * @FilePath: /algorithm/test1.cpp
@@ -10,28 +10,61 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-int missingNumber(vector<int>& nums) {
-        int sum=0;
-        int b = nums.size();
-        for(int i=0;i<nums.size();i++)
+class MyQueue
+{
+private:
+    stack<int> inStack, outStack;
+    void in2out()
+    {
+        while (!inStack.empty())
         {
-            sum += nums[i];
+            outStack.push(inStack.top());
+            inStack.pop();
         }
-        int a = (nums.size()+1)*nums.size()/2 - sum;
-        return a;
-}
+    }
+
+public:
+    void init()
+    {
+        for (int i = 0; i < 50; i++)
+        {
+            this->inStack.push(i);
+        }
+    }
+    void push(int x)
+    {
+        inStack.push(x);
+    }
+
+    int pop()
+    {
+        if (outStack.empty())
+        {
+            in2out();
+        }
+        int x = outStack.top();
+        outStack.pop();
+        return x;
+    }
+
+    int peek()
+    {
+        if (outStack.empty())
+        {
+            in2out();
+        }
+        return outStack.top();
+    }
+
+    bool empty()
+    {
+        return inStack.empty() && outStack.empty();
+    }
+};
 
 int main()
 {
-    int num;
-    cin >> num;
-    int sum=0;
-    do
-    {
-        sum = num/10 + num%10;
-        cout << sum << endl;
-        num = sum;
-    } while (sum==2);
-    return sum;
+    MyQueue mq;
+    cout << mq.empty() << endl;
+    cout << mq.peek() << endl;
 }
