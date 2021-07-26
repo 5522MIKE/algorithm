@@ -2,7 +2,7 @@
  * @Author: MikyMing
  * @Date: 2021-07-22 17:34:34
  * @LastEditors: MikyMing
- * @LastEditTime: 2021-07-25 09:59:36
+ * @LastEditTime: 2021-07-26 21:39:04
  * @Description: set
  * @Analysis: set
  * @FilePath: /algorithm/dataStructure/dataStructure_考研数据结构.md
@@ -25,8 +25,9 @@
 
 ## 栈和队列
 1. 队列-顺序存储-链式存储-双端队列-层次遍历-系统应用
-    - 232.用栈实现队列
+    - [232] 用栈实现队列
 2. 栈-括号匹配-表达式求值-递归
+    - [1021] 删除最外层的括号
 3. 数组的存储
 4. 矩阵的压缩存储
 5. 稀疏矩阵
