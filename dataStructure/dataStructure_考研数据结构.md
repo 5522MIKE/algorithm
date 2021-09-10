@@ -2,7 +2,7 @@
  * @Author: MikyMing
  * @Date: 2021-07-22 17:34:34
  * @LastEditors: MikyMing
- * @LastEditTime: 2021-07-27 23:22:33
+ * @LastEditTime: 2021-09-10 18:42:08
  * @Description: set
  * @Analysis: set
  * @FilePath: /algorithm/dataStructure/dataStructure_考研数据结构.md
@@ -18,6 +18,7 @@
 
 ## 线性表
 1. 顺序表
+    - [234] 回文链表 使用栈来储存之后进行对比
 2. 单链表
 3. 双链表
 4. 循环链表
@@ -63,6 +64,7 @@
 
 ## 排序
 1. 插入-折半-希尔
+    - [DS] 插入排序
 2. 冒泡-快速排序
 3. 简单选择排序-堆排序
 4. 归并-基数排序
